@@ -1,0 +1,74 @@
+body {
+  font-family: Tahoma, sans-serif;
+  background-color: #FFF8E7;
+  color: #4B3B2A;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+header {
+  background: #F6E8D6;
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid #E4D6C2;
+}
+
+.container {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 12px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-form input,
+.add-form input,
+.edit-form input,
+.filter-form select,
+.edit-form select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.add-form button,
+.filter-form button,
+.edit-form button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.todos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  padding: 10px;
+  border-bottom: 1px dashed #E4D6C2;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.actions a {
+  margin-left: 8px;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
+  color: #666;
+}

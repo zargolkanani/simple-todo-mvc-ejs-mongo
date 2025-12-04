@@ -1,0 +1,19 @@
+<h2>افزودن کار جدید</h2>
+
+<form method="POST" action="/add" class="add-form">
+    <div>
+        <label>عنوان کار:</label>
+        <input type="text" name="title" placeholder="کار جدید..." required />
+    </div>
+
+    <div>
+        <label>وضعیت:</label>
+        <select name="status">
+            <option value="pending" selected>در انتظار</option>
+            <option value="done">انجام‌شده</option>
+        </select>
+    </div>
+
+    <button type="submit">افزودن</button>
+    <a href="/">انصراف</a>
+</form>

@@ -1,0 +1,35 @@
+<section class="controls">
+  <form method="GET" class="filter-form">
+    <input type="text" name="search" placeholder="جستجو..." value="<%= search %>"/>
+    <select name="status">
+      <option value="" <%= (!selectedStatus) ? "selected" : "" %>>همه</option>
+      <option value="pending" <%= selectedStatus === "pending" ? "selected" : "" %>>در انتظار</option>
+      <option value="done" <%= selectedStatus === "done" ? "selected" : "" %>>انجام‌شده</option>
+    </select>
+    <button type="submit">فیلتر</button>
+  </form>
+
+  <form method="POST" action="/add" class="add-form">
+    <input type="text" name="title" placeholder="کار جدید..." required />
+    <button type="submit">افزودن</button>
+  </form>
+</section>
+
+<section class="todos">
+  <% if (todos && todos.length) { %>
+    <ul>
+      <% todos.forEach(todo => { %>
+        <li class="todo-item">
+          <span class="title"><%= todo.title %></span>
+          <span class="meta">— <%= todo.status %></span>
+          <span class="actions">
+            <a href="/edit/<%= todo._id %>">ویرایش</a>
+            <a href="/delete/<%= todo._id %>" onclick="return confirm('آیا مطمئن هستید؟')">حذف</a>
+          </span>
+        </li>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>هیچ کاری یافت نشد.</p>
+  <% } %>
+</section>

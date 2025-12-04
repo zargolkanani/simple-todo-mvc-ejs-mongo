@@ -1,0 +1,19 @@
+<h2>ویرایش کار</h2>
+
+<form method="POST" action="/edit/<%= todo._id %>" class="edit-form">
+  <div>
+    <label>عنوان</label>
+    <input type="text" name="title" value="<%= todo.title %>" required />
+  </div>
+
+  <div>
+    <label>وضعیت</label>
+    <select name="status">
+      <option value="pending" <%= todo.status === "pending" ? "selected" : "" %>>در انتظار</option>
+      <option value="done" <%= todo.status === "done" ? "selected" : "" %>>انجام‌شده</option>
+    </select>
+  </div>
+
+  <button type="submit">ذخیره</button>
+  <a href="/">انصراف</a>
+</form>
