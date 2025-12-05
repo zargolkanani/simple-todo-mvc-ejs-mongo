@@ -9,7 +9,7 @@ const app = express();
 
 // تنظیم پورت و Mongo URI از env یا مقدار پیش‌فرض
 const PORT = process.env.PORT || 3000;
-const MONGODB_URI = process.env.MONGODB_URI || mongodb+srv://zargolkanaani:Zargoli2003@cluster0.yvkkdht.mongodb.net/?appName=Cluster0;
+const MONGODB_URI = process.env.MONGODB_URI || mongodb+srv://zargolkanaani:Zargol123456789@cluster0.yvkkdht.mongodb.net/?appName=Cluster0;
 
 // اتصال به MongoDB Atlas
 mongoose.connect(MONGODB_URI, {
